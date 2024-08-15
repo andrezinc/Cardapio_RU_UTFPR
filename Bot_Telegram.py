@@ -15,7 +15,8 @@ def download():
 def totext():
     os.system("pdftotext -layout -fixed 13 Cardapio/*.pdf")
 def reader_manipuler():
-    finalz = [ "```"]
+    finalz_a=["```"]
+    finalz_b=["```"]
     a=0
     txt_file = [f for f in os.listdir('Cardapio') if f.endswith('.txt')]
     with open('Cardapio/'+txt_file[0]) as reader:
@@ -31,17 +32,30 @@ def reader_manipuler():
                 if line.find(sem[(num+1)]) != -1:
                     second=data.index(line)
         for val in range(first,second-3):
-            finalz.append(data[val])
-    return finalz
+            s1= slice(30)
+            s= data[val][s1]+"\n"
+            finalz_a.append(s.strip())
+            s1= slice(30,len(data[val]))
+            s= data[val][s1]
+            finalz_b.append(s.strip())
+
+
+    return finalz_a,finalz_b
  
 def clean():
     os.system("cd .. & rm -r Cardapio")
 def main():
+    mesagem_a = []
+    mesagem_b = []
     download()
     totext()
-    mensagem="\n".join(reader_manipuler())
+    mesagem_a,mesagem_b =  reader_manipuler()
+    mensagem="\n".join(mesagem_a)
     mensagem+="```"
     send_message(mensagem)
+    mensagem="\n".join(mesagem_b)
+    mensagem+="```"
+    send_message(mensagem) #shit code :p
     clean()
 if __name__=='__main__':
     main()
