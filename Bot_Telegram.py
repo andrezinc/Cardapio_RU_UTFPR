@@ -5,16 +5,16 @@ from datetime import date
 URL_RU='https://drive.google.com/drive/folders/10GEyvT-ma0iOGz-ale1CpdPM5Lt2fdhQ'
 TOKEN=''
 ID=''
-num= date.today().weekday()
-sem=("segunda","terça","quarta","quinta","sexta","sábado","domingo","NULL")
-def send_message(Mensage):
+num= date.today().weekday() #qual é o dia de hoje
+sem=("segunda","terça","quarta","quinta","sexta","sábado","domingo","NULL") 
+def send_message(Mensage): #envio de mensagem
     bot = telebot.TeleBot(TOKEN)
     bot.send_message(ID,Mensage,parse_mode='MarkdownV2')
-def download():
+def download(): #download da pastado cardapio
     gdown.download_folder(URL_RU,output='Cardapio')
-def totext():
+def totext(): #conversão pela pdftotext version 24.06.1 
     os.system("pdftotext -layout -fixed 13 Cardapio/*.pdf")
-def reader_manipuler():
+def reader_manipuler(): #manipulacao de texto
     finalz_a=["```"]
     finalz_b=["```"]
     a=0
