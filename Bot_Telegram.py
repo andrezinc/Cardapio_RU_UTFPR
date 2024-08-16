@@ -47,8 +47,8 @@ def clean():
 def main():
     mesagem_a = []
     mesagem_b = []
-    download()
-    totext()
+    #download()
+    #totext()
     mesagem_a,mesagem_b =  reader_manipuler()
     mensagem="\n".join(mesagem_a)
     mensagem+="```"
@@ -56,6 +56,6 @@ def main():
     mensagem="\n".join(mesagem_b)
     mensagem+="```"
     send_message(mensagem) #shit code :p
-    clean()
+    #clean()
 if __name__=='__main__':
     main()
