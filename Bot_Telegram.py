@@ -7,9 +7,15 @@ TOKEN=''
 ID=''
 num= date.today().weekday() #qual é o dia de hoje
 sem=("segunda","terça","quarta","quinta","sexta","sábado","domingo","NULL") 
-def send_message(Mensage): #envio de mensagem
-    bot = telebot.TeleBot(TOKEN)
-    bot.send_message(ID,Mensage,parse_mode='MarkdownV2')
+def send_message(Mensage): #envio de mensagem, retorna 1 quando da erro e 0 quando envia a mensagem
+    try:
+        bot = telebot.TeleBot(TOKEN)
+        bot.send_message(ID,Mensage,parse_mode='MarkdownV2')
+        time.sleep(2)
+        return 0
+    except Exception as e:
+        time.sleep(2)
+        return 1
 def download(): #download da pastado cardapio
     gdown.download_folder(URL_RU,output='Cardapio')
 def totext(): #conversão pela pdftotext version 24.06.1 
@@ -52,10 +58,12 @@ def main():
     mesagem_a,mesagem_b =  reader_manipuler()
     mensagem="\n".join(mesagem_a)
     mensagem+="```"
-    send_message(mensagem)
+    while(send_message(mensagem)): #tenta enviar a mensagem se não for ele tenta novamente
+        print("try...\n")
     mensagem="\n".join(mesagem_b)
     mensagem+="```"
-    send_message(mensagem) #shit code :p
+    while(send_message(mensagem)):#tenta enviar a mensagem se não for ele tenta novamente
+        print("try...\n")
     #clean()
 if __name__=='__main__':
     main()
