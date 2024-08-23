@@ -1,6 +1,7 @@
 import telebot
 import gdown
 import os
+import time 
 from datetime import date
 URL_RU='https://drive.google.com/drive/folders/10GEyvT-ma0iOGz-ale1CpdPM5Lt2fdhQ'
 TOKEN=''
