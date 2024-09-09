@@ -11,7 +11,7 @@ O sistema é composto por dois scripts:
    - **Converte o PDF para Texto**: Após o download, o PDF é convertido em um arquivo de texto (.txt) para facilitar o processamento.
    - **Limpeza de Dados**: Remove arquivos temporários antigos para manter o sistema limpo e atualizado.
 
-2. **BOT.py**:
+2. **Bot_Telegram.py**:
    - **Envio de Informações**: De segunda a sábado, este script envia as informações do cardápio para um bot do Telegram, permitindo que os alunos consultem o cardápio facilmente através do aplicativo de mensagens.
 
 ### Funcionalidades
