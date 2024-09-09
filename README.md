@@ -1,6 +1,3 @@
-**# Caradapio RU UTFPR
-
-O código é destinado a uma máquina com Arch Linux. O script `BOT.py` será executado de segunda a sábado via `crontab`, enquanto o `Download.py` será executado toda segunda-feira para baixar um PDF e convertê-lo em TXT, preparando os dados para o `BOT.py`.
 **## Cardápio RU UTFPR
 
 O projeto **Cardápio RU UTFPR** visa automatizar o acesso ao cardápio do Restaurante Universitário (RU) da UTFPR, facilitando para os alunos obterem as informações diretamente no Telegram. Desenvolvido para sistemas com Arch Linux, o projeto utiliza dois scripts Python principais para gerenciar o cardápio semanalmente.
@@ -28,5 +25,3 @@ O sistema é composto por dois scripts:
 1. **Configuração do Ambiente**: Certifique-se de ter o Arch Linux e as bibliotecas Python necessárias instaladas (`gdown`, `pdftotext`).
 2. **Configuração do Cron**: Ajuste o `crontab` para executar `Download.py` toda segunda-feira e `BOT.py` diariamente de segunda a sábado.
 3. **Execução dos Scripts**: Assegure-se de que os scripts tenham permissões de execução adequadas e estejam no diretório correto.
-
-Para mais detalhes sobre o projeto, consulte o repositório [Cardápio RU UTFPR](https://github.com/andrezinc/Cardapio_RU_UTFPR).
