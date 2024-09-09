@@ -1,4 +1,4 @@
-**## Cardápio RU UTFPR
+## Cardápio RU UTFPR
 
 O projeto **Cardápio RU UTFPR** visa automatizar o acesso ao cardápio do Restaurante Universitário (RU) da UTFPR, facilitando para os alunos obterem as informações diretamente no Telegram. Desenvolvido para sistemas com Arch Linux, o projeto utiliza dois scripts Python principais para gerenciar o cardápio semanalmente.
 
