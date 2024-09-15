@@ -33,10 +33,10 @@ def reader_manipuler(): #manipulacao de texto
         data=reader.readlines()
         for line in data:
             a=a+1
-            if(a>28): #cara eu realmente nao sei programar em python eu pulei as 28 linhas
-                if line.find(sem[num]) != -1:
+            if(a>28): #pulando 28 linhas... de maneira armadora
+                if line.lower().find(sem[num])!= -1:
                     first=data.index(line)
-                if line.find(sem[(num+1)]) != -1:
+                if line.lower().find(sem[num+1]) != -1:
                     second=data.index(line)
         for val in range(first,second-3):
             s1= slice(30)
