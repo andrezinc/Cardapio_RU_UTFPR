@@ -25,3 +25,5 @@ O sistema é composto por dois scripts:
 1. **Configuração do Ambiente**: Certifique-se de ter o Arch Linux e as bibliotecas Python necessárias instaladas (`gdown`, `pdftotext`).
 2. **Configuração do Cron**: Ajuste o `crontab` para executar `Download.py` toda segunda-feira e `BOT.py` diariamente de segunda a sábado.
 3. **Execução dos Scripts**: Assegure-se de que os scripts tenham permissões de execução adequadas e estejam no diretório correto.
+
+![Imagem Cardapio](Captura.png)
